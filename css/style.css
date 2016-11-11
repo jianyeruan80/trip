@@ -1,0 +1,302 @@
+
+
+@font-face {
+  font-family: 'cwTeXHei';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+}
+html,body{
+	font-family: 'STXinwei', Georgia, "Times New Roman", 
+             "Microsoft YaHei", "微软雅黑", 
+             STXihei, "华文细黑", 
+             serif;
+
+}
+#nav {position: absolute;left:50%;z-index: 666666666;margin-left:-500px;height: 100%;background: red;top:0%;}
+#nav ul li:nth-child(1){
+color:#fff; font-size:40px;
+	position: absolute;list-style:none;background:rgba(213, 0, 0,1);height:115.5px;width:198px;margin:45px 5px;
+     transform:rotate(60deg);
+	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+	  bottom:-20%;
+	  left:0%;		
+	  animation:animation1 0.6s forwards;
+	white-space:nowrap;
+}
+#nav ul li:nth-child(1):before{
+	content:"";height:115.5px;width:198px;background:rgba(213, 0, 0,1);position:absolute;top:0px;left:0px;z-index:1;
+	transform:rotate(-120deg);
+	-webkit-transform:rotate(-120deg);
+	-moz-transform:rotate(-120deg);
+
+	
+}
+#nav ul li:nth-child(1):after{
+	
+	text-shadow:4px 4px 8px #000;
+    	content:"特价优惠";height:115.5px;width:198px;background:rgba(213, 0, 0,1);position:absolute;top:0px;left:0px;z-index:1;line-height:115.5px;text-align:center;
+	transform:rotate(-60deg);
+	-webkit-transform:rotate(-60deg);
+	-moz-transform:rotate(-60deg);
+}
+#nav ul li:nth-child(1):hover{
+	color:yellow;
+	font-size:50px;
+}
+
+
+
+#nav ul li:nth-child(2){position: absolute;list-style:none;background:rgba(255, 206, 66,1);height:115.5px;width:198px;margin:45px 5px;
+     color:#fff;font-size:40px;
+     transform:rotate(60deg);
+	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+      bottom:-20%;
+	  left:205px;		
+	  animation:animation1 0.6s 0.5s	 forwards;
+	white-space:nowrap;
+}
+#nav ul li:nth-child(2):before{
+	
+	content:"";height:115.5px;width:198px;background:rgba(255, 206, 66,1);position:absolute;top:0px;left:0px;z-index:1;
+	transform:rotate(-120deg);
+	-webkit-transform:rotate(-120deg);
+	-moz-transform:rotate(-120deg);
+	
+}
+#nav ul li:nth-child(2):after{
+
+    text-shadow:4px 4px 8px #000;
+	content:"特色服务";height:115.5px;width:198px;background:rgba(255, 206, 66,1);position:absolute;top:0px;left:0px;z-index:1;line-height:115.5px;text-align:center;
+	transform:rotate(-60deg);
+	-webkit-transform:rotate(-60deg);
+	-moz-transform:rotate(-60deg);
+}
+#nav ul li:nth-child(2):hover{
+	color:red;
+	font-size:50px;
+}
+
+
+
+
+
+#nav ul li:nth-child(3){position: absolute;list-style:none;background:rgba(0, 200, 83,1);height:115.5px;width:198px;margin:45px 5px;
+	font-size:40px;color:#fff;	
+     transform:rotate(60deg);
+	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+      bottom:-20%;
+	 
+	  left:410px;
+	  animation:animation1 0.6s 1.1s	 forwards;
+	white-space:nowrap;
+}
+#nav ul li:nth-child(3):before{
+	content:"";height:115.5px;width:198px;background:rgba(0, 200, 83,1);position:absolute;top:0px;left:0px;z-index:1;
+	transform:rotate(-120deg);
+	-webkit-transform:rotate(-120deg);
+	-moz-transform:rotate(-120deg);
+	
+}
+#nav ul li:nth-child(3):after{
+	
+	text-shadow:4px 4px 8px #000;
+content:"订制服务";height:115.5px;width:198px;background:rgba(0, 200, 83,1);position:absolute;top:0px;left:0px;z-index:1;line-height:115.5px;text-align:center;
+	transform:rotate(-60deg);
+	-webkit-transform:rotate(-60deg);
+	-moz-transform:rotate(-60deg);
+}
+#nav ul li:nth-child(3):hover{
+	color:yellow;
+	font-size:50px;
+}
+
+
+
+
+#nav ul li:nth-child(4){position: absolute;list-style:none;background:rgba(3, 155, 229,1);height:115.5px;width:198px;margin:45px 5px;
+	color:#fff;font-size: 40px;
+     transform:rotate(60deg);
+	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+      bottom:-20%;
+	  left:615px;		
+	  animation:animation1 0.6s 1.7s	 forwards;
+	white-space:nowrap;
+}
+#nav ul li:nth-child(4):before{
+	content:"";height:115.5px;width:198px;background:rgba(3, 155, 229,1);position:absolute;top:0px;left:0px;z-index:1;
+	transform:rotate(-120deg);
+	-webkit-transform:rotate(-120deg);
+	-moz-transform:rotate(-120deg);
+	
+}
+#nav ul li:nth-child(4):after{
+	text-shadow:4px 4px 8px #000;
+        content:"租车服务";height:115.5px;width:198px;background:rgba(3, 155, 229,1);position:absolute;top:0px;left:0px;z-index:1;line-height:115.5px;text-align:center;
+	transform:rotate(-60deg);
+	-webkit-transform:rotate(-60deg);
+	-moz-transform:rotate(-60deg);
+}
+#nav ul li:nth-child(4):hover{
+	color:red;
+	font-size:50px;
+}
+
+
+#nav ul li:nth-child(5){position: absolute;list-style:none;background:rgba(224, 64, 251,1);height:115.5px;width:198px;margin:45px 5px;
+	color:#fff;font-size:40px;
+     transform:rotate(60deg);
+	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+      bottom:-20%;
+	  left:820px;		
+	  animation:animation1 0.6s 2.3s	 forwards;
+	white-space:nowrap;
+}
+#nav ul li:nth-child(5):before{
+	content:"";height:115.5px;width:198px;background:rgba(224, 64, 251,1);position:absolute;top:0px;left:0px;z-index:1;
+	transform:rotate(-120deg);
+	-webkit-transform:rotate(-120deg);
+	-moz-transform:rotate(-120deg);
+	
+}
+#nav ul li:nth-child(5):after{
+	text-shadow:4px 4px 8px #000;
+	content:"横跨国家";height:115.5px;width:198px;background:rgba(224, 64, 251,1);position:absolute;top:0px;left:0px;z-index:1;line-height:115.5px;text-align:center;
+	transform:rotate(-60deg);
+	-webkit-transform:rotate(-60deg);
+	-moz-transform:rotate(-60deg);
+}
+#nav ul li:nth-child(5):hover{
+	color:yellow;
+	font-size:50px;
+}
+
+
+ 
+@keyframes animation1{
+    0% {bottom:0%;}100% {bottom:60%; }
+ }
+
+
+
+
+
+
+.angleRight {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background: #00C853;
+  color: #fff;
+  display: inline;
+  margin: 20px;
+  padding:2px 5px;
+  border-radius:5px 0 0 5px;
+}
+
+.angleRight:before {
+  content: "";
+  position: absolute;
+  border-left: solid #00C853 12.5px;
+  border-top: solid transparent 12.5px;
+  border-bottom: solid transparent 12.5px;
+  top: 0;
+  right: 0;
+  transform: translate(100%, 0);
+}
+
+.angleActiveRight {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background: red;
+  color: #fff;
+  display: inline;
+  margin: 20px;
+  padding:2px 5px;
+  border-radius:5px 0 0 5px;
+}
+
+.angleActiveRight:before {
+  content: "";
+  position: absolute;
+  border-left: solid red 12.5px;
+  border-top: solid transparent 12.5px;
+  border-bottom: solid transparent 12.5px;
+  top: 0;
+  right: 0;
+  transform: translate(100%, 0);
+}
+/*@font-face {
+  font-family: 'SignPainter';src: url("fonts/SignPainter-ShowcardStunt.otf")
+}*/
+
+
+.logo{
+	font-family: "Merienda One" !important;
+  position: absolute;top:40%;left:50%;font-size:5px;padding: 10px;
+   transform: translate(-50%);
+-ms-transform: translate(-50%); /* IE 9 */
+-webkit-transform: translate(-50%);/* Safari and Chrome */
+-o-transform: translate(-50%);  /* Opera */
+-moz-transform: translate(-50%);  
+  white-space:nowrap;
+  text-shadow:4px 4px 8px #000;
+  animation:animationLogoA 1.5s ease-in forwards;
+  /*animation:animationLogoB 1s 3s  ease-in forwards;*/
+}
+@keyframes animationLogoA{
+ 0% {font-size:0px;color:yellow} 
+ 80% {font-size:5vw;color:red;top:40%;left:50%;}
+ 100% {font-size:25px;color:#000;top:0%;left:0%; transform: translate(0%);}
+}
+
+/*@keyframes animationLogoB{
+ 
+ 0% {font-size:0px;color:#000;} 
+}
+*/
+/*.logoHover{
+ font-size: 100px;
+}
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.NEW1{
+animation:animationNew1 6s 1
+white-space:nowrap;
+animation-fill-mode:forwards;
+ }
+ .REOPEN1{
+animation:animationRepen1 6s 1; 
+animation-fill-mode:forwards;
+white-space:nowrap;
+}
+@keyframes animationNew1{
+ 0% {font-size:12vmin;color:#fff;color:#000;} 
+  11% {font-size:14vmin;color:#fff;color:red;} 
+
+    22% {font-size:12vmin;color:#fff;color:#000;} 
+   33% {font-size:14vmin;color:#fff;color:red;} 
+
+    44% {font-size:12vmin;color:#fff;color:#000;} 
+   55% {font-size:14vmin;color:#fff;color:red;} 
+
+   66% {font-size:12vmin;color:#fff;color:#000;} 
+   77% {font-size:14vmin;color:#fff;color:red;} 
+
+   88% {font-size:12vmin;color:#fff;color:#000;} 
+   100% {font-size:12.5vmin;color:#fff;color:red;} 
+
+}*/

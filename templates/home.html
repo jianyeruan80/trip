@@ -1,0 +1,20 @@
+<ion-view view-title="Cloud Menu Background"  hide-back-button="true">
+  <ion-content>
+     <video id="video" style="width:100%;height:100%">
+      <source id="mp4"  type="video/mp4">
+       
+     </video>
+     <div ng-class="{'logo':true,'logoHover':true}">My Trip</div>
+     <span class="ion-navicon-round" style="position: absolute;top:0px;right:0px;font-size: 30px;padding: 10px" ng-click="aa=!aa"></span>
+     <div id="nav" ng-if="!!aa">
+  <ul>
+    <li ui-sref="home.special"></li>
+    <li></li>
+    <li></li>
+    <li ui-sref="home.rentcar"></li>
+    <li></li>
+
+  </ul>
+</div>
+  </ion-content>
+</ion-view>
