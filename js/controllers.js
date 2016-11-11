@@ -11,7 +11,8 @@ angular.module('starter.controllers', [])
             }
         }
     })
- .controller('AppCtrl', function($scope,$rootScope,$state,$location,$timeout,myService) {
+ .controller('AppCtrl', function($scope,$rootScope,$state,$location,$ionicLoading,$timeout,myService) {
+            $ionicLoading.show();
             $scope.app={};
             $scope.app.menus=[
               {"name":"特价"},
@@ -26,11 +27,13 @@ angular.module('starter.controllers', [])
 
 
         myService.getImages(function(data){
+
             $scope.images = [];
             $scope.results = data.results.slice(0,page*pageSize);
             for (var i = 0; i < $scope.results.length; i++) {
                 $scope.images.push($scope.results[i]);
             }
+            $ionicLoading.hide();
         })
         $scope.text = "点我加载更多"
         $scope.loadMore = true;
@@ -60,13 +63,10 @@ angular.module('starter.controllers', [])
  .controller('RentcarCtrl', function($scope,$rootScope,$state,$location,$timeout,myService) {
   
   })
-.controller('SpecialCtrl', function($scope,$rootScope,$state,$location,$timeout,myService) {
+.controller('SpecialCtrl', function($scope,$rootScope,$state,$timeout,$ionicLoading,$location,$timeout,myService) {
   
+                
 
-
-/*$(function () {
-            randomCloudLabel();
-        });*/
 
          $scope.rand=function(num) {
                 return parseInt(Math.random() * num + 1);
@@ -90,8 +90,10 @@ angular.module('starter.controllers', [])
                 obj[i].style.color = "#" + $scope.randomcolor();
             }
         }
-
-  $scope.randomCloudLabel();
+  $timeout(function(){
+$scope.randomCloudLabel();    
+  },10)
+  
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
