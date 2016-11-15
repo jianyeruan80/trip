@@ -15,19 +15,149 @@ html,body{
              "Microsoft YaHei", "微软雅黑", 
              STXihei, "华文细黑", 
              serif;
-
+font-size:10px;
 }
-#nav {position: absolute;left:50%;z-index: 666666666;margin-left:-500px;height: 100%;background: red;top:0%;}
+.content{
+	position:absolute;top:0;right:0;left:0;bottom:0;
+}
+.headerFont{
+	  position:absolute;width:100%;color:#fff;
+	  text-align: center;top:50px;
+}
+.footerFont{
+	  position:absolute;width:100%;color:#fff;
+	  text-align: center;bottom: 200px;border-radius: 10px;
+}
+.fontfff{
+	color:#fff !important;
+}
+.mark{
+background: #000;
+opacity: 0.9; 
+background: rgba(0, 0, 0, 0.9)
+}
+.mark0{
+background: #C31818 !important;
+opacity: 0.8; 
+background: rgba(195, 24, 24, 0.8) !important;
+}
+.mark1{
+background: #FFEB3B  !important;
+opacity: 0.8; 
+background: rgba(232, 203, 69, 0.8)  !important;
+}
+.mark2{
+background: #40DCB0;
+opacity: 0.8; 
+background: rgba(64, 220, 176, 0.8)
+}
+.mark3{
+background:#5091CD;
+opacity: 0.8; 
+background: rgba(80, 145, 205, 0.8)
+}
+.mark4{
+background: #BC2DD1;
+opacity: 0.8; 
+background: rgba(188, 45, 209, 0.8)
+}
+#nav{
+	width:1200px;height:300px;position:absolute;top:30%;left:50%;margin-left:-550px;z-index: 9999999;
+}
+#nav > div{
+	float:left;color:#fff;position:relative;margin:0 10px;border-radius: 50%;white-space:nowrap;width: 220px;height: 220px;
+	transform:scale(0.01);font-size:4rem;
+}
+#nav > div:nth-child(1){
+      border:#D50000 2px solid;
+     
+      animation:animationDown 1.5s forwards;
+	
+}
+
+#nav > div:nth-child(2){
+      border:#FFEB3B 2px solid;
+     animation:animationDown 1.5s 	 forwards;
+}
+
+#nav > div:nth-child(3){
+      border:#1DE9B6 2px solid;
+       animation:animationDown 1.5s 	 forwards;
+}
+
+#nav > div:nth-child(4){
+      border:#0091EA 2px solid;
+      animation:animationDown 1.5s 	 forwards;
+}
+
+#nav > div:nth-child(5){
+      border:#D500F9 2px solid;
+       animation:animationDown 1.5s forwards;
+}
+#nav > div  .divback{
+     background:#000;position:absolute;top:0;left:0;bottom:0;right:0;border-radius: 50%;transform:scale(0.001);transition: all .3s ease-in-out;
+}
+#nav > div  .divfont{
+      position: absolute;width: 100%;text-align: center;top:50%;
+}
+#nav > div:nth-child(1):hover > .divback {
+transform:scale(1.1);
+}
+#nav > div:nth-child(1):hover > .divfont {
+transform:scale(1.2);
+color:#D50000;
+}
+#nav > div:nth-child(2):hover > .divback {
+transform:scale(1.1);
+}
+#nav > div:nth-child(2):hover > .divfont {
+transform:scale(1.2);
+color:#FFEB3B;
+}
+#nav > div:nth-child(3):hover > .divback {
+transform:scale(1.1);
+}
+#nav > div:nth-child(3):hover > .divfont {
+transform:scale(1.2);
+color:#1DE9B6;
+}
+#nav > div:nth-child(4):hover > .divback {
+transform:scale(1.1);
+}
+#nav > div:nth-child(4):hover > .divfont {
+transform:scale(1.2);
+color:#0091EA;
+}
+#nav > div:nth-child(5):hover > .divback {
+transform:scale(1.1);
+}
+#nav > div:nth-child(5):hover > .divfont {
+transform:scale(1.2);
+color:#D500F9;
+}
+/*.hoverActive{
+	color:#fff !important;
+	font-size:5rem !important;
+	background:#000;
+    
+	/*animation:animationUp 1.5s forwards;*/
+
+ 
+@keyframes animationDown{
+     0% {transform:scale(0.2);}
+     70% {transform:scale(1.2);}
+     80% {transform:scale(0.8);}
+     100% {transform:scale(1);}
+ }
+
+
+/*#nav {position: absolute;left:50%;z-index: 666666666;margin-left:-500px;height: 100%;background: red;top:0%;}
 #nav ul li:nth-child(1){
-color:#fff; font-size:40px;
-	position: absolute;list-style:none;background:rgba(213, 0, 0,1);height:115.5px;width:198px;margin:45px 5px;
-     transform:rotate(60deg);
-	-webkit-transform:rotate(60deg);
-	-moz-transform:rotate(60deg);
-	  bottom:-20%;
-	  left:0%;		
-	  animation:animation1 0.6s forwards;
-	white-space:nowrap;
+     border-radius:50%;
+  position:relative;
+  border:solid red 1px;
+  width:200px;
+  height:200px;
 }
 #nav ul li:nth-child(1):before{
 	content:"";height:115.5px;width:198px;background:rgba(213, 0, 0,1);position:absolute;top:0px;left:0px;z-index:1;
@@ -185,7 +315,7 @@ content:"订制服务";height:115.5px;width:198px;background:rgba(0, 200, 83,1);
 @keyframes animation1{
     0% {bottom:0%;}100% {bottom:60%; }
  }
-
+*/
 
 
 

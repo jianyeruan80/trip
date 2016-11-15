@@ -14,18 +14,19 @@ angular.module('starter.controllers', [])
  .controller('AppCtrl', function($scope,$rootScope,$state,$location,$ionicLoading,$timeout,myService) {
             $ionicLoading.show();
             $scope.app={};
+            
             $scope.app.menus=[
               {"name":"特价"},
               {"name":"特色"},
               {"name":"订制"},
               {"name":"租车"},
-              {"name":"横跨国家"},
+              {"name":"横跨国家"}
             ];
             
        var page = 1;
         var pageSize = 20;
 
-
+       $timeout(function(){},100)
         myService.getImages(function(data){
 
             $scope.images = [];
@@ -115,8 +116,38 @@ $scope.randomCloudLabel();
   $scope.chat = Chats.get($stateParams.chatId);
 })
 .controller('HomeCtrl', function($scope, $stateParams, $timeout) {
-  
+         $scope.timer=null;
+          $scope.mark=false;
+         $scope.hoverIndex=6;
+         $scope.hoverIn=function(index){
+          $timeout.cancel($scope.timer);
+           
+           $scope.hoverIndex=index;
+           
+           $scope.stopPropagation();
+         }
+         $scope.hoverOut=function(){
+            $scope.timer=$timeout(function(){
+              $scope.hoverIndex=6;
+            },500)
+            
+            
+         }
+         $scope.homeMenus=[
+              {"name":"特价服务"},
+              {"name":"特色服务"},
+              {"name":"订制服务"},
+              {"name":"租车服务"},
+              {"name":"横跨国家"}
+            ];
+            
+$scope.stopPropagation=function(){
+       
+         var e = window.event;
+         e.cancelBubble = true;
 
+         if (e.stopPropagation) e.stopPropagation();
+  }
 
 var vList = ['https://s3-us-west-2.amazonaws.com/coverr/mp4/Hey-World.mp4', 'https://s3-us-west-2.amazonaws.com/coverr/mp4/Hey-World.mp4']; // ³õÊ¼»¯²¥·ÅÁÐ±í
 var vLen = vList.length; // ²¥·ÅÁÐ±íµÄ³¤¶È
@@ -127,8 +158,17 @@ var n = 0; // µ±Ç°²¥·ÅµÄÊÓÆµ
     document._video = document.getElementById("video");
   //  document.addEventListener("DOMContentLoaded", init, false);
 
-
-
+/*myVid.muted=true;*/
+$scope.stop=function(){
+  if(!document._video.paused){
+    document._video.pause();
+    $scope.mark=true;
+  }else{
+    document._video.play();
+    $scope.mark=false;
+  }
+  //document._video.pause();
+}
 
 function play() {
 
@@ -145,10 +185,10 @@ $timeout(function(){
 play(0)
 },0);
 
-document.getElementById("video").addEventListener("ended", myFc3);
-function myFc3() {
+document.getElementById("video").addEventListener("ended", play);
+/*function myFc3() {
   play();
-}
+}*/
 
 })
 .controller('AccountCtrl', function($scope) {

@@ -4,17 +4,23 @@
       <source id="mp4"  type="video/mp4">
        
      </video>
-     <div ng-class="{'logo':true,'logoHover':true}">My Trip</div>
-     <span class="ion-navicon-round" style="position: absolute;top:0px;right:0px;font-size: 30px;padding: 10px" ng-click="aa=!aa"></span>
-     <div id="nav" ng-if="!!aa">
-  <ul>
-    <li ui-sref="home.special"></li>
-    <li></li>
-    <li></li>
-    <li ui-sref="home.rentcar"></li>
-    <li></li>
+      
+     <div ng-mouseover="hoverOut(6)"  ng-class="{'content':true,'mark':mark,'mark0':hoverIndex==0,'mark1':hoverIndex==1,'mark2':hoverIndex==2,'mark3':hoverIndex==3,'mark4':hoverIndex==4}">
+      <div ng-class="{'logo':true,'logoHover':true}"><span ng-class="{'fontfff':mark}">My Trip</span></div>
+      
+           
+           <span ng-class="{'ion-navicon-round':!mark,'ion-close-round':mark,'fontfff':mark}"  style="position: absolute;top:0px;right:0px;font-size: 5rem;padding: 10px" ng-click="stop();"></span>
+           <h1 class="footerFont"  ng-if="mark">New York Locate</h1>
+            <h1 class="headerFont" ng-if="mark"><img src="img/images.png" width="150x"></h1>
+           <div id="nav" ng-if="mark">
 
-  </ul>
+           <div  ng-repeat="item in homeMenus" ng-class="{'hoverActive':hoverIndex==$index}" ng-mouseover="hoverIn($index)">
+                  <div class="divback" ></div>
+                  <div class="divfont"  >{{item.name}}</div>
+           </div>
+
 </div>
+
+
   </ion-content>
 </ion-view>
