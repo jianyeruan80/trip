@@ -26,7 +26,7 @@ font-size:10px;
 }
 .footerFont{
 	  position:absolute;width:100%;color:#fff;
-	  text-align: center;bottom: 200px;border-radius: 10px;
+	  text-align: center;bottom:200px;border-radius: 10px;
 }
 .fontfff{
 	color:#fff !important;
@@ -62,7 +62,7 @@ opacity: 0.8;
 background: rgba(188, 45, 209, 0.8)
 }
 #nav{
-	width:1200px;height:300px;position:absolute;top:30%;left:50%;margin-left:-550px;z-index: 9999999;
+	width:1200px;height:200px;position:absolute;top:30%;left:50%;margin-left:-600px;z-index: 9999999;
 }
 #nav > div{
 	float:left;color:#fff;position:relative;margin:0 10px;border-radius: 50%;white-space:nowrap;width: 220px;height: 220px;

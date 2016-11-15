@@ -14,7 +14,7 @@
             <h1 class="headerFont" ng-if="mark"><img src="img/images.png" width="150x"></h1>
            <div id="nav" ng-if="mark">
 
-           <div  ng-repeat="item in homeMenus" ng-class="{'hoverActive':hoverIndex==$index}" ng-mouseover="hoverIn($index)" ng-mouseover="hoverOut(6)" >
+           <div  ng-repeat="item in homeMenus" ng-class="{'hoverActive':hoverIndex==$index}" ng-mouseover="hoverIn($index)" ng-mouseout="hoverOut(6)" >
                   <div class="divback" ></div>
                   <div class="divfont"  >{{item.name}}</div>
            </div>

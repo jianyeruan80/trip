@@ -163,9 +163,11 @@ $scope.stop=function(){
   if(!document._video.paused){
     document._video.pause();
     $scope.mark=true;
+
   }else{
     document._video.play();
     $scope.mark=false;
+    $scope.hoverIndex=6;
   }
   //document._video.pause();
 }
