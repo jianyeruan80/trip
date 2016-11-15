@@ -5,7 +5,7 @@
        
      </video>
       
-     <div ng-mouseover="hoverOut(6)"  ng-class="{'content':true,'mark':mark,'mark0':hoverIndex==0,'mark1':hoverIndex==1,'mark2':hoverIndex==2,'mark3':hoverIndex==3,'mark4':hoverIndex==4}">
+     <div  ng-class="{'content':true,'mark':mark,'mark0':hoverIndex==0,'mark1':hoverIndex==1,'mark2':hoverIndex==2,'mark3':hoverIndex==3,'mark4':hoverIndex==4}">
       <div ng-class="{'logo':true,'logoHover':true}"><span ng-class="{'fontfff':mark}">My Trip</span></div>
       
            
@@ -14,7 +14,7 @@
             <h1 class="headerFont" ng-if="mark"><img src="img/images.png" width="150x"></h1>
            <div id="nav" ng-if="mark">
 
-           <div  ng-repeat="item in homeMenus" ng-class="{'hoverActive':hoverIndex==$index}" ng-mouseover="hoverIn($index)">
+           <div  ng-repeat="item in homeMenus" ng-class="{'hoverActive':hoverIndex==$index}" ng-mouseover="hoverIn($index)" ng-mouseover="hoverOut(6)" >
                   <div class="divback" ></div>
                   <div class="divfont"  >{{item.name}}</div>
            </div>

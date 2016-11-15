@@ -129,7 +129,7 @@ $scope.randomCloudLabel();
          $scope.hoverOut=function(){
             $scope.timer=$timeout(function(){
               $scope.hoverIndex=6;
-            },500)
+            },300)
             
             
          }
