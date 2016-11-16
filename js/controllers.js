@@ -115,6 +115,32 @@ $scope.randomCloudLabel();
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
+
+
+.controller('FeatureCtrl', function($scope, $stateParams, $timeout,$location){
+      $scope.gallery=[
+   'img/1.jpg',
+    'img/2.jpg',
+    'img/3.jpg',
+   ]
+  
+    var displayTime=15;
+    var cssHTML="";
+   var len=$scope.gallery.length;
+   $scope.gallery[len]=$scope.gallery[0];
+           angular.forEach($scope.gallery,function(v,k){
+                 var delayTime=parseInt(displayTime)*k;
+                 cssHTML+=
+                   ".anim_fade_image"+k+"{animation: fadeInOut  "+displayTime+"s "+delayTime+"s linear forwards;z-index:"+(len-k)+";}";
+/*                     background-size: auto 100%;
+  cursor: pointer;
+  animation: panorama 10s linear infinite alternate; */
+          })
+    
+         createStyle(cssHTML);
+         
+        $timeout(function(){fade(len);},50) 
+})
 .controller('HomeCtrl', function($scope, $stateParams, $timeout,$location){
          $scope.timer=null;
           $scope.mark=false;
@@ -134,12 +160,13 @@ $scope.randomCloudLabel();
             
          }
          $scope.linkTo=function(i){
+          
                 switch(i) {
     case 0:
         $location.path("/home/special");
         break;
     case 1:
-//        code block
+  $location.path("/home/feature");
         break;
     case 2:
         // $location.path("/home/rentcar");
@@ -220,3 +247,51 @@ document.getElementById("video").addEventListener("ended", play);
     enableFriends: true
   };
 });
+
+     
+ function createStyle(cssHTML){
+   var style = document.createElement('style');
+    style.type = 'text/css';
+   var head = document.getElementsByTagName('head')[0];
+    if(style.styleSheet){
+    style.styleSheet.cssText = cssHTML;
+    }else{
+     style.appendChild(document.createTextNode(cssHTML));
+    }
+    document.getElementsByTagName('head')[0].appendChild(style); 
+ }
+function whichTransitionEvent(){
+       var t;
+       var el = document.createElement('fakeelement');
+       var transitions = {
+         'animation':'animationend',
+         'webkitAnimation':'webkitAnimationEnd',
+         'transition':'transitionend',
+         'OTransition':'oTransitionEnd',
+         'MozTransition':'transitionend',
+         'WebkitTransition':'webkitTransitionEnd',
+         
+       }
+       for(t in transitions){
+           if( el.style[t] !== undefined ){
+               return transitions[t];
+           }
+       }
+   }
+var transitionEvent = whichTransitionEvent();
+ function fade(len) {
+      var  elementList = document.querySelectorAll(".efg");
+      var e=elementList[elementList.length-2];
+    
+    transitionEvent && e.addEventListener(transitionEvent, function() {
+             for(var i=0;i<elementList.length;i++){
+               elementList[i].classList.remove('anim_fade_image'+i);
+                     (function(arg){         
+                               window.setTimeout(function(){
+                                 elementList[arg].classList.add('anim_fade_image'+arg);
+                               },100)
+                        })(i);                             
+ }
+              });
+         
+  }

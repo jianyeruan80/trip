@@ -13,6 +13,7 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
       <link href="css/main.css" rel="stylesheet">
+       <link href="css/demo.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
       
 
@@ -34,5 +35,19 @@
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
      <script src="https://rawgit.com/zedwang/angular-waterfall/master/src/angular-waterfall.js"></script>
+      <script src="js/ScrollTrigger.min.js"></script>
+  <script>
+  window.counter = function() {
+    // this refers to the html element with the data-scroll-showCallback tag
+    var span = this.querySelector('span');
+    var current = parseInt(span.textContent);
+    
+    span.textContent = current + 1;
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    ScrollTrigger.init();
+  });
+  </script>
 </html>
 
