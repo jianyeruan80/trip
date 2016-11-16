@@ -115,7 +115,7 @@ $scope.randomCloudLabel();
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
-.controller('HomeCtrl', function($scope, $stateParams, $timeout) {
+.controller('HomeCtrl', function($scope, $stateParams, $timeout,$location){
          $scope.timer=null;
           $scope.mark=false;
          $scope.hoverIndex=6;
@@ -133,6 +133,28 @@ $scope.randomCloudLabel();
             
             
          }
+         $scope.linkTo=function(i){
+                switch(i) {
+    case 0:
+        $location.path("/home/special");
+        break;
+    case 1:
+//        code block
+        break;
+    case 2:
+        // $location.path("/home/rentcar");
+        break;
+     case 3:
+
+         $location.path("/home/rentcar");
+  //      code block
+        break;
+    case 4:
+    //    code block
+        break;	
+    
+}
+          }
          $scope.homeMenus=[
               {"name":"特价服务"},
               {"name":"特色服务"},
