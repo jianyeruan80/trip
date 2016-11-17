@@ -76,12 +76,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',"n
         controller: 'HomeCtrl'
    
   })
-  .state('home.account', {
-    url: '/account',
+  .state('home.customer', {
+    url: '/customer',
     views: {
       'menuContent': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+        templateUrl: 'templates/tab-customer.html',
+        controller: 'CustomerCtrl'
       }
     }
   })
@@ -96,6 +96,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',"n
 
 
   // if none of the above states i matched, use this as the fallback
-  $urlRouterProvider.otherwise('/index');
+  $urlRouterProvider.otherwise('/home/customer');
  $locationProvider.html5Mode(true);
 });
