@@ -113,7 +113,7 @@ $scope.randomCloudLabel();
 })
 
 .controller('CustomerCtrl', function($scope, $stateParams, $timeout) {
-  alert("OK");
+  
   $scope.shuffle=function(arr) {
     var i, 
         j,
