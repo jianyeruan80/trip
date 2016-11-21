@@ -96,6 +96,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',"n
 
 
   // if none of the above states i matched, use this as the fallback
-  $urlRouterProvider.otherwise('/home/customer');
+  $urlRouterProvider.otherwise('/index');
  $locationProvider.html5Mode(true);
 });

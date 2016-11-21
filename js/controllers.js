@@ -113,7 +113,7 @@ $scope.randomCloudLabel();
 })
 
 .controller('CustomerCtrl', function($scope, $stateParams, $timeout) {
-  alert("OK");
+  
   $scope.shuffle=function(arr) {
     var i, 
         j,
@@ -129,9 +129,9 @@ $scope.randomCloudLabel();
   
   
   $scope.bubble={};
-  $scope.bubble.left=$scope.shuffle(['20%','30%','40%','50%','60%','70%','80%','15%','25%','35%','42%','53%','63%','52%','48%','51%','68%','41%']);
+  $scope.bubble.left=$scope.shuffle(['10%','20%','30%','40%','50%','60%','70%','80%','90%','15%','25%','35%','45%','55%','65%','75%','85%','48%']);
   $scope.bubble.p=$scope.shuffle([0,5,10,20,25,30,35,40,-5,-10,-20,-25,-30,-35,-40,25,30,35,40,-25,-30,-35,-40]);
-  $scope.bubble.bottom=$scope.shuffle(['30%','40%','50%','60%','35%','45%','55%','40%','50%','60%','35%','45%','30%','40%','50%','35%','45%','55%']);
+  $scope.bubble.bottom=$scope.shuffle(['30%','40%','50%','60%','35%','45%','55%','30%','40%','50%','60%','35%','45%','55%','30%','40%','50%','60%','35%','45%','55%','30%','40%','50%','60%','35%','45%','55%']);
   $scope.bubble.delayTime=$scope.shuffle([3,4,5,6,1.5,2.5,3.5,4.5,5.5,6.5,0.5,,4,5,6,1.5,2.5,3.5,4.5,5.5,6.5,7,8,9,10,11]);
   $scope.bubble.showTime=$scope.shuffle([15,21,22,23,24,25,26,27,28,15,16,17,18,19,20,15,10,11,12,13,14,15,16,17,18,19,20,15,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]);
   $scope.bubble.size=$scope.shuffle(['5vw','6vw','7vw','5vw','6vw','7vw','5vw','6vw','7vw','8vw','9vw','5.5vw','5vw','6vw','7vw','8vw','9vw','5vw','6vw','7vw','8vw','9vw','5.5vw','4vw','5vw','6vw','7vw','8vw','9vw']);
@@ -141,9 +141,9 @@ $scope.randomCloudLabel();
    $timeout(
     function(){
     $scope.bubble.size=$scope.shuffle($scope.bubble.size);
-   /*  $scope.bubble.left=$scope.shuffle($scope.bubble.left); */
+    $scope.bubble.left=$scope.shuffle($scope.bubble.left); 
   $scope.bubble.color=$scope.shuffle( $scope.bubble.color);
-  },30000)
+  },20000)
 })
 
 
