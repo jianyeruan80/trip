@@ -462,26 +462,13 @@ white-space:nowrap;
 {
   
   flex:1 400%; 
-    transition: 0.3s;
+    transition: 1s;
 }
 .containerFlow img{
 	margin: 0;padding: 0;
 }
 
-.album{
- 
- animation: zoom-out 1s 1 both;
-  animation-fill-mode:forwards; 
-}
 
-@-webkit-keyframes zoom-out {
-  0% {
-    -webkit-transform: scale3d(0,0,0);
-  }
-  100% {
-    -webkit-transform: scale3d(1,1,1);
-  }
-}
 /*.label {
   position: absolute;
   bottom: 0px;

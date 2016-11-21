@@ -148,6 +148,109 @@ $scope.randomCloudLabel();
 
 
 .controller('FeatureCtrl', function($scope, $stateParams, $timeout,$location){
+/*    
+$scope.throttle=function(func, wait, mustRun) {
+
+  var timeout,
+    startTime = new Date();
+alert("OKssx")
+  return function() {
+    var context = this,
+      args = arguments,
+      curTime = new Date();
+alert("22222222222222222")
+     $timeout.cancel(timeout);
+    // 如果达到了规定的触发时间间隔，触发 handler
+    if(curTime - startTime >= mustRun){
+      func.apply(context,args);
+      startTime = curTime;
+    // 没达到触发间隔，重新设定定时器
+     alert("s")
+    }else{
+       alert("ss")
+      timeout = $timeout(realFunc, wait);
+    }
+  };
+};
+$scope.loadElements=function() {
+ alert("OK")
+  var height = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+  
+  var load = document.querySelectorAll(".aa:not(.album)" );
+   //load = document.querySelectorAll(".aa" ); 
+   
+  for(var i=0;i<load.length;i++){
+    var temp=load[i].getBoundingClientRect().top < height * 1  ? true : false; 
+    console.log(load[i]);
+    console.log(temp);
+     if(temp==true){
+       console.log(temp)
+       load[i].classList.add("album");
+       
+     }
+  }
+  
+  
+
+}
+
+$scope.realFunc=function(){
+$scope.loadElements();
+}
+$scope.realFunc();*/
+/*$scope.throttle = function (fn, delay, atleast) {
+    console.log("=====833====")
+        var timer = null;
+        var previous = null;
+
+        return function () {
+          console.log("==s==dgg====")
+            var now = +new Date();
+
+            if ( !previous ) previous = now;
+            if ( atleast && now - previous > atleast ) {
+                fn();
+                // 重置上一次开始时间为本次结束时间
+                 console.log("b")
+                previous = now;
+                clearTimeout(timer);
+            } else {
+              console.log("b")
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    fn();
+                    previous = null;
+                }, delay);
+            }
+        }
+    };
+    function loadElements() {
+  console.log("xxxxxxxxxxx")
+  var height = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+  
+  var load = document.querySelectorAll( ".albumhide" );
+    load.forEach(function (el, i) {
+  
+      if(el.getBoundingClientRect().top < height * 1>0){
+           el.classList.add("albumshow");
+      }
+
+      });
+  
+
+}*/
+    // $scope.throttle1(function(){alert("")},500,1000);
+    $scope.onScoll = function() {
+    //  loadElements()
+         /*console.log($ionicScrollDelegate.getScrollPosition().top)*/
+      myEfficientFn();
+
+    
+    }
       $scope.gallery=[
    'img/1.jpg',
     'img/2.jpg',
@@ -325,3 +428,65 @@ var transitionEvent = whichTransitionEvent();
               });
          
   }
+
+
+
+
+
+function throttle(func, wait, mustRun) {
+    var timeout,
+        startTime = new Date();
+ 
+    return function() {
+        var context = this,
+            args = arguments,
+            curTime = new Date();
+    
+        clearTimeout(timeout);
+        // 如果达到了规定的触发时间间隔，触发 handler
+        if(curTime - startTime >= mustRun){
+            func.apply(context,args);
+            startTime = curTime;
+        // 没达到触发间隔，重新设定定时器
+        }else{
+            timeout = setTimeout(func, wait);
+        }
+    };
+};
+// 实际想绑定在 scroll 事件上的 handler
+/*function realFunc(){
+    console.log("Success");
+}
+*/
+
+function loadElements() {
+ 
+  var height = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+  
+  var load = document.querySelectorAll(".animated" );
+   //load = document.querySelectorAll(".aa" ); 
+   
+  for(var i=0;i<load.length;i++){
+    var temp=load[i].getBoundingClientRect().top < height * 1  ? true : false; 
+    var className=load[i].dataset.animated;
+     if(temp==true){
+       
+       load[i].classList.add(className);
+       
+     }else{
+       load[i].classList.remove(className);
+     }
+  }
+  
+  
+
+}
+
+
+// 采用了节流函数
+var myEfficientFn = throttle(loadElements,250,500);
+myEfficientFn();
+
+/*loadElements();*/
